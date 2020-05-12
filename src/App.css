@@ -64,3 +64,7 @@ button {
   background: #247ba0;
   color: #fff;
 }
+.renderStyle {
+  display: flex;
+  justify-content: center;
+}

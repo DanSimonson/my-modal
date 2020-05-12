@@ -25,12 +25,17 @@ const Modal = ({ isShowing, hide, data }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p>Hello, I'm a modal.</p>
-            </div>
-            <div>
-              {data.map((dataDetail, index) => {
-                return <h1 key={dataDetail.id}>{dataDetail.title}</h1>;
-              })}
+              <p className="renderStyle">Modal Example</p>
+              <div>
+                {data.map((dataDetail, index) => {
+                  return (
+                    <div className="renderStyle">
+                      <h1>Title: </h1>
+                      <h1 key={dataDetail.id}>{dataDetail.title}</h1>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </React.Fragment>,
