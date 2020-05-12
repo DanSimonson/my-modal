@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Modal = ({ isShowing, hide }) =>
+const Modal = ({ isShowing, hide, data }) =>
   isShowing
     ? ReactDOM.createPortal(
         <React.Fragment>
@@ -26,6 +26,11 @@ const Modal = ({ isShowing, hide }) =>
                 </button>
               </div>
               <p>Hello, I'm a modal.</p>
+            </div>
+            <div>
+              {data.map((dataDetail, index) => {
+                return <h1 key={dataDetail.id}>{dataDetail.title}</h1>;
+              })}
             </div>
           </div>
         </React.Fragment>,
