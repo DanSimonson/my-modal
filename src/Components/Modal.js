@@ -25,7 +25,9 @@ export default function MyModal({ isShowing, hide, data }) {
                       aria-label="Close"
                       onClick={hide}
                     >
-                      <span aria-hidden="true">&times;</span>
+                      <span className="close-span" aria-hidden="true">
+                        &times;
+                      </span>
                     </button>
                   </div>
                   <p className="renderStyle">Modal Example</p>
