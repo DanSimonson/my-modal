@@ -32,8 +32,7 @@ const reducer = (state, action) => {
 function App() {
   const { isShowing, toggle } = useModal();
   const [state, dispatch] = React.useReducer(reducer, initialState);
-  //console.log("data: ", data);
-  //const { data, setData } = [];
+
   React.useEffect(() => {
     axios
       .get(`./JsonData.json`)
@@ -45,7 +44,6 @@ function App() {
       });
   }, []);
   const { data } = state;
-  //console.log("data: ", data);
 
   return (
     <div className="App">
